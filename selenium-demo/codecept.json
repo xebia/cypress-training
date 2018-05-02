@@ -1,8 +1,14 @@
 {
-  "tests": "./*_test.js",
+  "tests": "./specs/*_spec.js",
   "timeout": 10000,
   "output": "./output",
-  "helpers": {},
+
+    "helpers": {
+      "Puppeteer": {
+        "url": "http://localhost",
+        "show": false
+      }
+  },
   "include": {
     "I": "./steps_file.js"
   },

@@ -1,0 +1,14 @@
+{
+  "name": "tests",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joël Grimberg <jgrimberg@xebia.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^2.1.0"
+  }
+}

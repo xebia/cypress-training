@@ -2,5 +2,7 @@ client/node_modules/
 server/node_modules/
 tests/cypress/screenshots
 tests/cypress/videos
+tests/node_modules/
+selenium-demo/node_modules/
 .idea/*
 output

@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 //
 // **** Kitchen Sink Tests ****
 //
@@ -10,6 +11,8 @@
 
 // Please read our "Introduction to Cypress"
 // https://on.cypress.io/introduction-to-cypress
+
+
 
 describe('Kitchen Sink', function () {
   it('.should() - assert that <title> is correct', function () {
@@ -26,6 +29,8 @@ describe('Kitchen Sink', function () {
     cy.title().should('include', 'Kitchen Sink')
     //   ↲               ↲            ↲
     // subject        chainer      value
+
+
   })
 
   context('Querying', function () {

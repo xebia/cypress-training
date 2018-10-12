@@ -1,5 +1,6 @@
 /node_modules/
-tests/cypress/screenshots
-tests/cypress/videos
 .idea/*
 output
+client/node_modules/
+server/node_modules/
+*.iml

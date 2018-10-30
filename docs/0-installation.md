@@ -8,15 +8,9 @@ The system under test that we will be using is a tabular music tracker. It consi
 ![server-client](./images/server_client.png)
 
 # Running the project
-
-You have two choices:
-
-1. Ask the workshop trainer for a cloud virtual machine, which has all the necessary setup done. You'll only need Remote desktop to connect.
-2. Or you can run the project locally, which requires that you have `npm` and `git` installed. Follow the instructions in the section 'Checking out the project'.
+In order to run the project locally, it is required that you have `npm` and `git` installed. Follow the instructions in the section 'Checking out the project'.
 
 ## Checking out the project
-(you can skip this section if you are using the virtual machine, move on to 'Starting the client & server')
-
 1. Clone the [project from GitHub](https://github.com/xebia/cypress-training)
 
 ```

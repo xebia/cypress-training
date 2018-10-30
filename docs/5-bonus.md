@@ -1,6 +1,6 @@
 # BONUS EXERCISES
 
-Want to know more? We have some extra exercises for you to try out!  
+Want to know more? We have some extra exercises for you to try out!
 
 # Using the Cypress Dashboard
 
@@ -9,15 +9,15 @@ Want to know more? We have some extra exercises for you to try out!
 1. Click on the `Runs tab` of your project within the Test Runner.
 2. Login using your Github credentials.
 3. Click `Setup Project` to Record.
-4. After setting up your project, Cypress inserted a unique `projectID` into your `cypress.json`. 
+4. After setting up your project, Cypress inserted a unique `projectID` into your `cypress.json`.
 5. Run your test suite using a command like this: ```cypress run --record --key <record key>```
 6. Review your results in your dashboard
 
 -------------
 # Skipping the UI
-You can use the [cy.request](https://docs.cypress.io/api/commands/request.html) command to do a HTTP request. 
+You can use the [cy.request](https://docs.cypress.io/api/commands/request.html) command to do a HTTP request.
 
-This can often be useful to _create a shortcut_. If the focus of your test is a piece of functionality behind a login screen, it would be great if we do not have to login through the UI before we can start our actual test. Or, when we want to modify an entity through the UI, perhaps we don't want to create it through the UI beforehand, but use the API directly. 
+This can often be useful to _create a shortcut_. If the focus of your test is a piece of functionality behind a login screen, it would be great if we do not have to login through the UI before we can start our actual test. Or, when we want to modify an entity through the UI, perhaps we don't want to create it through the UI beforehand, but use the API directly.
 
 In this exercise we will practice with a few online examples of this, to show you how this can be applied in practice.
 
@@ -27,10 +27,10 @@ A well known Selenium practice site is [http://the-internet.herokuapp.com/](http
 1. Figure out how the authentication for [/secure](http://the-internet.herokuapp.com/secure) works
 2. Write a test in Cypress that uses [cy.request](https://docs.cypress.io/api/commands/request.html) to authenticate
 3. Visit [/secure](http://the-internet.herokuapp.com/secure) directly
-4. Add a check that you are indeed logged in and on the secured page 
+4. Add a check that you are indeed logged in and on the secured page
 
 ## Exercise: Retrieving data through an API
-Let's imagine we have to fill in a form somewhere, but we need to use data from another API to complete the form. 
+Let's imagine we have to fill in a form somewhere, but we need to use data from another API to complete the form.
 
 1. Retrieve the user data from [https://reqres.in/api/users](https://reqres.in/api/users), you can add `?page=1` to the url to get different data.
 2. Visit the [/register page](https://www.phptravels.net/register) and enter the first and last name from the previous request in the form
@@ -49,7 +49,7 @@ Let's imagine we have to fill in a form somewhere, but we need to use data from 
 
 Although running in the browser, Cypress also allows you to do unit testing for your code, using [the frameworks](https://docs.cypress.io/guides/references/bundled-tools.html) you are familiar with.
 
-This can be convenient when you want one report or one tool for all the tests. But more importantly it supports a nice TDD flow for all of your tests. 
+This can be convenient when you want one report or one tool for all the tests. But more importantly it supports a nice TDD flow for all of your tests.
 
 ## Exercise: Setting up the unit tests
 Today we are going to setup some unit tests for a very simple unit: [sum_all.js](https://raw.githubusercontent.com/xebia/cypress-advanced-meetup-2018/master/my_simple_library/sum_all.js).
@@ -71,7 +71,7 @@ describe('My First Test', function() {
 
 ### Need Help?
 * [Unit testing](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/unit-testing__application-code) examples by Cypress
-* [Mocha interfaces](https://mochajs.org/#interfaces) for TDD and BDD 
+* [Mocha interfaces](https://mochajs.org/#interfaces) for TDD and BDD
 
 -------------
 ## Exercise: Setting up the reporting
@@ -82,7 +82,7 @@ Running tests is fun, but reporting on them is even more fun! Especially when it
 ```
 login through cy.request and reuse the cookie
     ✓ should load the secure page with the cy.request cookie (1536ms)
-``` 
+```
 2. When running in CI you'll probably want to publish your tests results, let's use the `junit` format for that. Cypress has a [reporter built-in](https://mochajs.org/#reporters) for that format.
 ```
 npx cypress run --reporter junit
@@ -93,20 +93,20 @@ Running this should produce a `test-results.xml`-file in your root directory.
 
 ### Need Help?
 * [Reporters](https://docs.cypress.io/guides/tooling/reporters.html) are offered by Cypress through Mocha
-* [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) is an easy way to run binaries from your `node_modules` 
+* [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) is an easy way to run binaries from your `node_modules`
 
 ## Exercise: Finding the bug in sum_all.js (bonus exercise)
 1. Write a unit test for the addFirstArgumentToRestThenSumTheRest-function in `sum_all.js` and then find and fix the bug!
 
 
 ### Need Help?
- 
+
 * [Rest and Spread operators](https://codingwithspike.wordpress.com/2016/06/11/javascript-rest-spread-operators/), how do they work in Javascript?
 
 -------------
 # Run tests in a Docker container
 
-Now you have succesfully completed all the assignments it is time to take a first step towards running your Cypress tests in CI 
+Now you have succesfully completed all the assignments it is time to take a first step towards running your Cypress tests in CI
 
 You do not want to worry about installing Cypress and it's dependencies on a server, instead you will create a docker container with both Cypress, the server and the tests. This way you can be sure your tests run anywhere, anytime.
 
@@ -114,19 +114,15 @@ You do not want to worry about installing Cypress and it's dependencies on a ser
 ## 1: Creating the docker file and run it locally
 
 1. Download the Docker Desktop client via <https://docs.docker.com/install/>
-2. Install the client and create a Docker account  <https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install>     
+2. Install the client and create a Docker account  <https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install>
 3. Figure out how to create a Docker file and where to put it in your project <https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>
-4. Create the docker container including it's dependencies. Don't forget you need an instance of the tabtracker client to run the tests 
-5. Run the container
+4. Create the docker container including it's dependencies. Don't forget you need an instance of the tabtracker client to run the tests <https://github.com/cypress-io/cypress-docker-images>
+5. Run the container and run a cypress test on your container
 
 ## 2: Output the results to the online Cypress Dashboard
 
 The Cypress Dashboard is a service that gives you access to recorded tests - typically when running Cypress tests from your CI provider. The Dashboard provides you insight into what happened when your tests ran.
 
-1. Output the results of the tests you've created thusfar to the online Dashboard.
-
-You can setup your project to record using the steps outlined here: 
-
-## Need help?
-1. Docker cheat sheet has some excellent examples <https://github.com/wsargent/docker-cheat-sheet>
-2. Cypress Dashboard https://docs.cypress.io/guides/core-concepts/dashboard-service.html#Setup
+You can setup your project to record using the steps outlined here:
+1. Cypress Dashboard https://docs.cypress.io/guides/core-concepts/dashboard-service.html#Setup
+2. Output the results of the tests you've created thusfar to the online Dashboard.

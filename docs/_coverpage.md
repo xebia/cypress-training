@@ -1,7 +1,7 @@
 <br/><br/>
 ![Cypress Logo](./images/cypress.png)
 
-> Welcome to the TestNet Cypress Workshop
+> Welcome to the Cypress Training by Xebia
 
 [Get started!](/0-installation.md)
 

@@ -14,17 +14,21 @@ When you start the TabTracker you will see an empty application. When you open y
 2. Start a new server instance using [cy.server()](https://docs.cypress.io/api/commands/server.html)
 3. Use [cy.route()](https://docs.cypress.io/api/commands/route.html) to route the songs GET request to a fixture file, replacing the empty respons with mocked data. You can use the JSON below as an example.
 ```json
-[{"id":1,
-"title":"Nevermind",
-"artist":"Nirvana",
-"genre":"Alternative Rock",
-"album":"Nevermind",
-"albumImageUrl":"https://is3-ssl.mzstatic.com/image/thumb/Features/d0/cc/62/dj.nanioukp.jpg/268x0w.jpg",
-"youtubeId":"m-ofL_3EZyE",
-"lyrics":"",
-"tab":"",
-"createdAt":"2018-02-13T12:56:24.432Z",
-"updatedAt":"2018-02-13T12:56:24.432Z"}]
+[
+  {
+    "id": 8,
+    "title": "Ghamat Ainy",
+    "artist": "Rashed Almajid",
+    "genre": "Khaliji",
+    "album": "Ghamat Ainy",
+    "albumImageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d5/4a/aa/d54aaac4-f2d5-c2a8-7076-3d2b88b31202/939412.jpg/626x0w.jpg",
+    "youtubeId": "https://www.youtube.com/watch?v=vEnea7rP_bQ",
+    "lyrics": "2",
+    "tab": "1",
+    "createdAt": "2018-10-30T08:44:53.759Z",
+    "updatedAt": "2018-10-30T08:44:53.759Z"
+  }
+]
 ```
 4. Assert that the title and artist are returned correctly.
 

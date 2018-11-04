@@ -73,6 +73,13 @@ describe('My First Test', function() {
 * [Unit testing](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/unit-testing__application-code) examples by Cypress
 * [Mocha interfaces](https://mochajs.org/#interfaces) for TDD and BDD
 
+## Exercise: Finding the bug in sum_all.js (bonus exercise)
+1. Write a unit test for the addFirstArgumentToRestThenSumTheRest-function in `sum_all.js` and then find and fix the bug!
+
+### Need Help?
+
+* [Rest and Spread operators](https://codingwithspike.wordpress.com/2016/06/11/javascript-rest-spread-operators/), how do they work in Javascript?
+
 -------------
 ## Exercise: Setting up the reporting
 
@@ -94,14 +101,6 @@ Running this should produce a `test-results.xml`-file in your root directory.
 ### Need Help?
 * [Reporters](https://docs.cypress.io/guides/tooling/reporters.html) are offered by Cypress through Mocha
 * [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) is an easy way to run binaries from your `node_modules`
-
-## Exercise: Finding the bug in sum_all.js (bonus exercise)
-1. Write a unit test for the addFirstArgumentToRestThenSumTheRest-function in `sum_all.js` and then find and fix the bug!
-
-
-### Need Help?
-
-* [Rest and Spread operators](https://codingwithspike.wordpress.com/2016/06/11/javascript-rest-spread-operators/), how do they work in Javascript?
 
 -------------
 # Run tests in a Docker container

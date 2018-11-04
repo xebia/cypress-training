@@ -8,6 +8,7 @@ Examples in the context of our Tab Tracker application are: 'Login', 'Adding a S
 For this first exercise we are going to create a custom command for the search functionality. 
 
 1. Create a new spec file
+
 In your Cypress Integration folder create a new spec file called ```cc_exercise1_spec.js``` and copy in the code below.
 
 ```
@@ -24,6 +25,7 @@ describe('Search actions', function () {
 Notice that we are calling a custom search function cy.search here. This function can be called as any other command in Cypress. Like ```cy.get()``` we can now simply invoke the custom command by typing ```cy.<custom command>```. In this case our custom command is called search and it takes a string to search on as an argument.
 
 2. Create a new custom command 
+
 Custom commands are stored in the ```cypress/support/``` folder. A good place to define your custom commands is in the ```cypress/support/commands.js``` file. You can create several custom commands in one file, but it is also possible to create separate files to group logical commands together. If you do this, you need to add these files to the ```cypress/support/index.js``` file. This file is loaded before any of the tests are run, ensuring your reusable functions are available for all your tests. 
 
 We are now going to create the needed search function in the ```cypress/support/commands.js``` file. You can use the code below.

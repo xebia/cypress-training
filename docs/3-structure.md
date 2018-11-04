@@ -17,8 +17,8 @@ describe('Search actions', function () {
     it('should search on song title', function () {
 
       cy.visit('http://localhost:8080/');
-      cy.search('blood');
-      cy.get('.song-title').should('contain','In the blood');
+      cy.search('Ghamat');
+      cy.get('.song-title').should('contain','Ghamat Ainy');
     });
 });
 ```

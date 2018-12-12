@@ -27,6 +27,10 @@ Let's try to open the edit page for the song we've just added.
 - Once we have the song details page open, click the edit button
 - Update the details of the song and save your changes
 
+### Deleting your testdata
+If you want to get your database to it's initial state, go to 
+http://localhost:8081/reset .
+
 ### If you get stuck
 On the create page almost every element has an id, try to use the CSS-selector id and you will find this exercise a walk in the park
 Have a look at this page if you want to refer to all the possible [css selectors](https://www.w3schools.com/cssref/css_selectors.asp).

@@ -17,8 +17,8 @@ describe('Search actions', function () {
     it('should search on song title', function () {
 
       cy.visit('http://localhost:8080/');
-      cy.search('Ghamat');
-      cy.get('.song-title').should('contain','Ghamat Ainy');
+      cy.search('Drop it');
+      cy.get('.song-title').should('contain','Drop it');
     });
 });
 ```

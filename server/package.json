@@ -25,16 +25,16 @@
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "sequelize": "^4.37.4",
+    "sequelize": "^5",
     "sqlite3": "^4.0.1"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eslint": "^4.6.0",
     "nodemon": "^1.11.0"
   }
 }

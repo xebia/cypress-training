@@ -35,8 +35,6 @@ Use `cy.get()` to select an element on the page.
 3. Assert that this element contains certain attributes.
 Use `cy.should()` to assert that the element is represented according to your expectations. The goal of your test is to assert that the landing page has been successfully opened. 
 
-### Important!
-The TabTracker has a nasty bug that sometimes redirects you to the Songs page. If you notice this please use `cy.clock()` as the first command in your test.
 
 ### If you get stuck
 You can find the three used Commands in this exercise in the Cypress API documentation. Use this documentation to complete your exercise. 

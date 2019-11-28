@@ -8,7 +8,10 @@ The system under test that we will be using is a tabular music tracker. It consi
 ![server-client](./images/server_client.png)
 
 # Running the project
-In order to run the project locally, it is required that you have `npm` and `git` installed. Follow the instructions in the section 'Checking out the project'.
+In order to run the project locally, it is required that you have `node` and `git` installed. Follow the instructions in the section 'Checking out the project'.
+If you don't have these installed yet you can find them here:
+- https://nodejs.org/en/download/
+- https://git-scm.com/download/
 
 ## Checking out the project
 1. Clone the [project from GitHub](https://github.com/xebia/cypress-training)

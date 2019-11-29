@@ -8,7 +8,7 @@ The system under test that we will be using is a tabular music tracker. It consi
 ![server-client](./images/server_client.png)
 
 # Running the project
-In order to run the project locally, it is required that you have `node` and `git` installed. 
+In order to run the project locally, it is required that you have `node` and `git` installed. For `node` version 8.2.1 or higher is required.
 
 If you don't have these installed yet you can find them here:
 - https://nodejs.org/en/download/

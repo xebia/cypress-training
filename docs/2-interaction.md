@@ -31,6 +31,13 @@ Let's try to open the edit page for the song we've just added.
 If you want to get your database to it's initial state, go to 
 http://localhost:8081/reset .
 
+## Exercise: Practicing with more assertions
+Cypress bundles a well-known Javascript assertion library, [Chai](https://docs.cypress.io/guides/references/assertions.html), to use in your tests. Try to create a test that does the following assertions:
+
+- Assert that there is no focus on the search field
+- Assert that the correct default text is shown in the field
+- Assert that the field gets focus when clicked
+
 ### If you get stuck
 On the create page almost every element has an id, try to use the CSS-selector id and you will find this exercise a walk in the park
 Have a look at this page if you want to refer to all the possible [css selectors](https://www.w3schools.com/cssref/css_selectors.asp).

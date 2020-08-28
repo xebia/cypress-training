@@ -28,10 +28,10 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setToken ({commit}, token) {
+    setToken ({ commit }, token) {
       commit('setToken', token)
     },
-    setUser ({commit}, user) {
+    setUser ({ commit }, user) {
       commit('setUser', user)
     }
   }

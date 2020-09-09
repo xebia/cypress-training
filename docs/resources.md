@@ -1,3 +1,3 @@
 # Further resources
 
-[_navbar.md](_navbar.md ':include')
+[\_navbar.md](_navbar.md ":include")

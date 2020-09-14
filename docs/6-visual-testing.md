@@ -35,22 +35,22 @@ Steps to be taken are:
   import { addMatchImageSnapshotCommand } from "cypress-image-snapshot/command";
 
   addMatchImageSnapshotCommand({
-  failureThreshold: 0.03, // threshold for entire image
-  failureThresholdType: "percent", // percent of image or number of pixels
-  customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
-  capture: "viewport", // capture viewport in screenshot
+    failureThreshold: 0.03, // threshold for entire image
+    failureThresholdType: "percent", // percent of image or number of pixels
+    customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
+    capture: "viewport", // capture viewport in screenshot
   });
   ```
 
   now we are all set to start screenshotting and diffing
 
-- setting a baseline for the visual test
+## Exercise: Setting a baseline for the visual test
 
-  ```bash
-  npx cypress run -s ./cypress/integration/test.js
-  ```
+```bash
+npx cypress run -s ./cypress/integration/test.js
+```
 
-- setup a new test which compares the outcome with the baseline
+## Setup a new test which compares the outcome with the baseline
 
 ## Visual Testing with Browserstack
 

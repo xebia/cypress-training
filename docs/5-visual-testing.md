@@ -11,6 +11,9 @@ your tests.
 ## Exercise: Visual Testing Locally
 
 In this excercise you will learn to set up visual testing using a Cypress plugin.
+The plugin repo (and information about how to install and use) can be found here:
+<https://github.com/palmerhq/cypress-image-snapshot>
+
 Steps to be taken are:
 
 - first we install the required snapshop plugin
@@ -46,17 +49,32 @@ Steps to be taken are:
 
 ## Exercise: Setting a baseline for the visual test
 
+Find out how to use the command-function in your test and run your visual test.
+A suggestion on how to run a specific test-file from the commandline:
+
 ```bash
 npx cypress run -s ./cypress/integration/test.js
 ```
 
 ## Setup a new test which compares the outcome with the baseline
 
+write your test and share it with the group
+
 ## Visual Testing with Browserstack
 
-Browserstack uses their own 'runners' to run setup the requested environments (operating systems and browsers) so that your test can run on top of that. You can use the 'free tier' which has some 'limitations'. You can read about them [here](https://link)
+Browserstack uses their own 'runners' to run setup the requested environments (operating systems and browsers) so that your test can run on top of that. You can use the 'free tier' which has some 'limitations'.
 
 ! a warning: the free plan of Browserstack has some usage limitations on the dashboard / runners.
 
-- create a free tier Browserstack account
-  <https://www.browserstack.com/users/sign_up>
+1. create a free tier Browserstack account
+   <https://www.browserstack.com/users/sign_up>
+
+2. install browserstack cli:
+   `npm install -g browserstack-cypress-cli`
+3. initialize browserstack in your project in your project folder (client-folder)
+   `browserstack-cypress init`
+4. Fill in the auth, browsers, run_settings values in the browserstack.json file to be able to run your tests. Refer to the configuration options to learn more about all the options you can use in browserstack.json and the possible values that you can mention.
+   you can find your auth key here:
+   <https://www.browserstack.com/accounts/settings>
+
+5. run `browserstack-cypress run` to run your test

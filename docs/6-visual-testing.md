@@ -54,9 +54,9 @@ npx cypress run -s ./cypress/integration/test.js
 
 ## Visual Testing with Browserstack
 
-Browserstack uses their own 'runners' to run setup the requested environments (operating systems and browsers) so that your test can run on top of that. You can use the 'free tier' which has some 'limitations'. You can read about them [here](https://link)
+Browserstack uses their own 'runners' to setup the requested environments (that is, operating systems and browsers) so that your test can run on top of that. You can use the 'free tier' which has some 'limitations'. You can read about them [here](https://link)
 
-! a warning: the free plan of Browserstack has some usage limitations on the dashboard / runners.
+! a warning: the free plan of Browserstack has some limitations on the dashboard / runners.
 
 - create a free tier Browserstack account
   <https://www.browserstack.com/users/sign_up>

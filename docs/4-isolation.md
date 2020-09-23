@@ -15,23 +15,23 @@ When you start the TabTracker you will see an empty application. When you open y
 1. Start a new server instance using [cy.server()](https://docs.cypress.io/api/commands/server.html)
 1. Use [cy.route()](https://docs.cypress.io/api/commands/route.html) to route the songs GET request to a fixture file, replacing the empty respons with mocked data. You can use the JSON below as an example.
 
-  ```json
-  [
-    {
-      "id": 9,
-      "title": "Bangerang",
-      "artist": "Skrillex",
-      "genre": "Dubstep",
-      "album": "Bangerang",
-      "albumImageUrl": "https://en.wikipedia.org/wiki/Bangarang#/media/File:BangarangSkrillex.jpg",
-      "youtubeId": "https://www.youtube.com/watch?v=YJVmu6yttiw",
-      "lyrics": "2",
-      "tab": "1",
-      "createdAt": "2018-10-30T08:44:53.759Z",
-      "updatedAt": "2018-10-30T08:44:53.759Z"
-    }
-  ]
-  ```
+```json
+[
+  {
+    "id": 9,
+    "title": "Bangerang",
+    "artist": "Skrillex",
+    "genre": "Dubstep",
+    "album": "Bangerang",
+    "albumImageUrl": "https://en.wikipedia.org/wiki/Bangarang#/media/File:BangarangSkrillex.jpg",
+    "youtubeId": "https://www.youtube.com/watch?v=YJVmu6yttiw",
+    "lyrics": "2",
+    "tab": "1",
+    "createdAt": "2018-10-30T08:44:53.759Z",
+    "updatedAt": "2018-10-30T08:44:53.759Z"
+  }
+]
+```
 
 1. Assert that the title and artist are returned correctly.
 
@@ -51,5 +51,5 @@ With Cypress you do not have to wait on a response. It will automatically wait f
 
 ### Need help?
 
-* Use the network tab in the developer tools of your browser to help you find the calls that your client application is trying to make.
-* Check out the [cy.route documentation](https://docs.cypress.io/api/commands/route.html#) for the correct syntax
+- Use the network tab in the developer tools of your browser to help you find the calls that your client application is trying to make.
+- Check out the [cy.route documentation](https://docs.cypress.io/api/commands/route.html#) for the correct syntax

@@ -32,6 +32,7 @@ Steps to be taken are:
 
   module.exports = (on, config) => {
   addMatchImageSnapshotPlugin(on, config)
+  }
   ```
 
   ```nodejs

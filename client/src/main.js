@@ -9,7 +9,6 @@ import 'vuetify/dist/vuetify.min.css'
 import store from '@/store/store'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import Panel from '@/components/globals/Panel'
-window.axios = require('axios');
 
 Vue.config.productionTip = false
 

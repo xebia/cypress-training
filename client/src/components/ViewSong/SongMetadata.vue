@@ -49,6 +49,7 @@
         <v-btn
           dark
           class="cyan"
+          id="fileDownload"
           @click="fileDownload">
           Download Image
         </v-btn>

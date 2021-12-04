@@ -103,12 +103,13 @@ describe('intercepts albums', () => {
   });
 
   it.only('tests retreiving albums', () => {
+    let rnd = Math.random().toString(36).substr(2, 5);
     cy.intercept('GET', 'http://localhost:8081/songs', {
       statusCode: 200,
       body: [
         {
           id: 1,
-          title: 'Nevermind',
+          title: `${rnd}`,
           artist: 'Nirvana',
           genre: 'Alternative Rock',
           album: 'Nevermind',
@@ -176,6 +177,7 @@ describe('intercepts albums', () => {
       ],
     }).as('getSongs');
     cy.visit('/');
+    cy.contains(`${rnd}`);
   });
 });
 
@@ -201,6 +203,9 @@ describe('intercepts albums', () => {
 // });
 
 describe('basic test: register yourself', () => {
+  // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
+  let rnd = Math.random().toString(36).substr(2, 5);
+
   it.only('registers', () => {
     cy.visit('/');
     // question for group: why can't I chain cy.get.contains?
@@ -210,7 +215,7 @@ describe('basic test: register yourself', () => {
     cy.contains('Nevermind');
 
     cy.get('a[href="#/register"').click();
-    cy.get('input[name="email"]').type('jgrimberg1@xebia.com');
+    cy.get('input[name="email"]').type(`${rnd}@xebia.com`);
     cy.get('input[name="password"]').type('password');
     cy.get('button[class="cyan btn btn--raised theme--dark"]').click();
     cy.get('button[class="btn btn--flat theme--dark"]').should('be.visible');
@@ -231,5 +236,11 @@ describe('basic tests: Practicing with assertions', () => {
     cy.get('div[class="input-group input-group--text-field"]')
       .get('label')
       .contains('Search by song title, artist, album, or genre');
+  });
+});
+
+describe('advanced stuff', () => {
+  it.only('advanced stuff', () => {
+    cy.task('hello_world');
   });
 });

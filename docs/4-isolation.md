@@ -12,8 +12,7 @@ For this exercise you will still be using the [TabTracker](https://github.com/co
 When you start the TabTracker you will see an empty application. When you open your browsers development tools, you will see that the application is trying to retrieve a list of Songs. Since your server isn't running it returns an empty response on the GET request. We want to return at least one song to fill the Songs list.
 
 1. Create a new spec file and set the baseURL to your TabTracker application.
-1. Start a new server instance using [cy.server()](https://docs.cypress.io/api/commands/server.html)
-1. Use [cy.route()](https://docs.cypress.io/api/commands/route.html) to route the songs GET request to a fixture file, replacing the empty respons with mocked data. You can use the JSON below as an example.
+1. Use [cy.intercept()](https://docs.cypress.io/api/commands/intercept) to route the songs GET request to a fixture file, replacing the empty response with mocked data. You can use the JSON below as an example.
 
 ```json
 [
@@ -37,7 +36,7 @@ When you start the TabTracker you will see an empty application. When you open y
 
 ## Exercise: Standard responses
 
-The server takes multiple arguments. With these arguments you can control the basic response of the mock server. This default behavior is overwritten with information the server receives from `cy.route()`.
+The intercept takes multiple arguments. With these arguments you can control the basic response of the mock server.
 
 Adding to the test that you've created in the previous step:
 
@@ -45,11 +44,11 @@ Adding to the test that you've created in the previous step:
 
 ## Exercise: Wait on your response
 
-With Cypress you do not have to wait on a response. It will automatically wait for your selector to appear in the DOM. However in our previous step we've exceeded the default time-out value of Cypress (4000ms). We do not want to increase this as this would slow down our tests and hide performance issues. However in this case we want to make sure that the page still loads after our 10 second delay. We can solve this by waiting explicitly for our `cy.route()` action.
+With Cypress you do not have to wait on a response. It will automatically wait for your selector to appear in the DOM. However in our previous step we've exceeded the default time-out value of Cypress (4000ms). We do not want to increase this as this would slow down our tests and hide performance issues. However in this case we want to make sure that the page still loads after our 10 second delay. We can solve this by waiting explicitly for our `cy.intercept` action.
 
 1. Modify your test in such a way that your assertion does not time-out.
 
 ### Need help?
 
 - Use the network tab in the developer tools of your browser to help you find the calls that your client application is trying to make.
-- Check out the [cy.route documentation](https://docs.cypress.io/api/commands/route.html#) for the correct syntax
+- Check out the [cy.intercept documentation](https://docs.cypress.io/api/commands/intercept) for the correct syntax

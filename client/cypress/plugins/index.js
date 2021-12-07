@@ -21,7 +21,7 @@ const { addMatchImageSnapshotPlugin } = require('cypress-image-snapshot/plugin')
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
 
 module.exports = (on, config) => {
-    addMatchImageSnapshotPlugin(on, config)
+  addMatchImageSnapshotPlugin(on, config)
 
-    on('task', { downloadFile })
+  on('task', { downloadFile })
 }

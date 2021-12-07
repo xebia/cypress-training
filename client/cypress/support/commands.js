@@ -28,22 +28,22 @@ import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command'
 require('cypress-downloadfile/lib/downloadFileCommand')
 
 addMatchImageSnapshotCommand({
-    failureThreshold: 0.03, // threshold for entire image
-    failureThresholdType: 'percent', // percent of image or number of pixels
-    customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
-    // capture: 'viewport', // capture viewport in screenshot
+  failureThreshold: 0.03, // threshold for entire image
+  failureThresholdType: 'percent', // percent of image or number of pixels
+  customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
+  // capture: 'viewport', // capture viewport in screenshot
 })
 
 Cypress.Commands.add('search', (searchString) => {
-    cy.log(searchString)
-    cy.get(
-        'input[aria-label="Search by song title, artist, album, or genre"]'
-    ).type(`${searchString}{enter}`)
+  cy.log(searchString)
+  cy.get(
+    'input[aria-label="Search by song title, artist, album, or genre"]'
+  ).type(`${searchString}{enter}`)
 })
 
 Cypress.Commands.add('login', (email, password) => {
-    cy.contains('Sign Up').click()
-    cy.get('input[name="email"]').type(email)
-    cy.get('input[name="password"]').type(password)
-    cy.get('button[name="registerBtn"]').click()
+  cy.contains('Sign Up').click()
+  cy.get('input[name="email"]').type(email)
+  cy.get('input[name="password"]').type(password)
+  cy.get('button[name="registerBtn"]').click()
 })

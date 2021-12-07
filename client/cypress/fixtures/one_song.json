@@ -1,0 +1,15 @@
+[
+    {
+        "id": 9,
+        "title": "Bangerang",
+        "artist": "Skrillex",
+        "genre": "Dubstep",
+        "album": "Bangerang",
+        "albumImageUrl": "https://en.wikipedia.org/wiki/Bangarang#/media/File:BangarangSkrillex.jpg",
+        "youtubeId": "https://www.youtube.com/watch?v=YJVmu6yttiw",
+        "lyrics": "2",
+        "tab": "1",
+        "createdAt": "2018-10-30T08:44:53.759Z",
+        "updatedAt": "2018-10-30T08:44:53.759Z"
+    }
+]

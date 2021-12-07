@@ -25,6 +25,8 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command'
 
+require('cypress-downloadfile/lib/downloadFileCommand')
+
 addMatchImageSnapshotCommand({
     failureThreshold: 0.03, // threshold for entire image
     failureThresholdType: 'percent', // percent of image or number of pixels

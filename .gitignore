@@ -9,3 +9,5 @@ server/node_modules/
 *.iml
 .DS_Store
 client/mydownloads/
+client/cypress/screenshots
+client/cypress/videos

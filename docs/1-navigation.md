@@ -13,7 +13,7 @@ To complete this exercise you will need to use at least the following commands:
 ## If you get stuck
 
 You can find the three Commands used in this exercise in the Cypress API documentation. Use this documentation to complete your exercise.
-<https://docs.cypress.io/api/introduction/api.html>
+<https://docs.cypress.io/api/table-of-contents>
 
 ## Exercise: Basic commands
 

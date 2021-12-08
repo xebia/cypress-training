@@ -28,10 +28,10 @@ import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command'
 require('cypress-downloadfile/lib/downloadFileCommand')
 
 addMatchImageSnapshotCommand({
-  failureThreshold: 0.03, // threshold for entire image
-  failureThresholdType: 'percent', // percent of image or number of pixels
-  customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
-  // capture: 'viewport', // capture viewport in screenshot
+  // failureThreshold: 0.03, // threshold for entire image
+  // failureThresholdType: 'percent', // percent of image or number of pixels
+  // customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
+  // // capture: 'viewport', // capture viewport in screenshot
 })
 
 Cypress.Commands.add('search', (searchString) => {

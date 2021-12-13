@@ -42,7 +42,7 @@ describe('exercise 2: Interaction', () => {
 
   it('should edit the song you just create', () => {
     cy.visit('/')
-    cy.wait(1000)
+    cy.wait(2000)
 
     cy.log(
       'because I know that the song that just was added is ordered last, I can use the last() function to get only the last edit-button to use for the click '
@@ -50,8 +50,8 @@ describe('exercise 2: Interaction', () => {
     cy.get('.btn__content').last().click()
     cy.wait(2000)
     cy.get('#edit').click()
-    cy.wait(1000)
-    cy.get('[aria-label="Title"]').click().clear().type('Quiet Germain Boys')
+    cy.wait(2000)
+    cy.get('aria-label="Title"]').click().clear().type('Quiet Germain Boys')
     cy.get('[aria-label="Tab"]').click().clear().type('Quiet Germain Tabs')
     cy.get('[aria-label="Lyrics"]').click().clear().type('Quiet Germain Tabs')
     cy.contains('save song', { matchCase: false }).click()

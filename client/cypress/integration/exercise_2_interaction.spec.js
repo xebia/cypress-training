@@ -51,7 +51,7 @@ describe('exercise 2: Interaction', () => {
     cy.wait(2000)
     cy.get('#edit').click()
     cy.wait(2000)
-    cy.get('aria-label="Title"]').click().clear().type('Quiet Germain Boys')
+    cy.get('[aria-label="Title"]').click().clear().type('Quiet Germain Boys')
     cy.get('[aria-label="Tab"]').click().clear().type('Quiet Germain Tabs')
     cy.get('[aria-label="Lyrics"]').click().clear().type('Quiet Germain Tabs')
     cy.contains('save song', { matchCase: false }).click()

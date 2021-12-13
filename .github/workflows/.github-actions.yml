@@ -17,7 +17,7 @@ jobs:
         with:
           working-directory: ./
           start: "npm run prod --prefix server, npm run start --prefix client"
-          wait-on: "http://localhost:8080"
+          wait-on: "http://localhost:8080, http://localhost:8081/songs"
           project: ./client
           record: true
         env:

@@ -41,9 +41,16 @@ Cypress.Commands.add('search', (searchString) => {
   ).type(`${searchString}{enter}`)
 })
 
-Cypress.Commands.add('login', (email, password) => {
+Cypress.Commands.add('signup', (email, password) => {
   cy.contains('Sign Up').click()
   cy.get('input[name="email"]').type(email)
   cy.get('input[name="password"]').type(password)
   cy.get('button[name="registerBtn"]').click()
+})
+
+Cypress.Commands.add('login', (email, password) => {
+  cy.contains('Login').click()
+  cy.get('input[name="email"]').type(email)
+  cy.get('input[name="password"]').type(password)
+  cy.get('button[name="loginBtn"]').click()
 })

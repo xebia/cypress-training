@@ -19,8 +19,11 @@
 
 const { addMatchImageSnapshotPlugin } = require('cypress-image-snapshot/plugin')
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
+const fs = require('fs')
 
 module.exports = (on, config) => {
+  require('cypress-grep/src/plugin')(config)
+
   addMatchImageSnapshotPlugin(on, config)
 
   on('task', { downloadFile }),
@@ -53,5 +56,32 @@ module.exports = (on, config) => {
 
       // whatever you return here becomes the launchOptions
       return launchOptions
+    }),
+    on('task', {
+      readFileMaybe(filename) {
+        if (fs.existsSync(filename)) {
+          return fs.readFileSync(filename, 'utf8')
+        }
+
+        return null
+      },
+    }),
+    on('task', {
+      deleteAllSnapshots(folder) {
+        // delete directory recursively
+        try {
+          fs.rmSync(folder, { recursive: true })
+
+          console.log(
+            '\x1b[36m%s\x1b[0m',
+            `all files in ${folder} are deleted!`
+          )
+        } catch (err) {
+          console.error('\x1b[31m%s\x1b[0m', `Error while deleting ${folder}`)
+        }
+
+        return null
+      },
     })
+  return config
 }

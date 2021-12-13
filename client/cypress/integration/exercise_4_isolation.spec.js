@@ -1,9 +1,10 @@
 /// <reference types="Cypress" />
+
 describe('exercise 4: Isolation', () => {
-  it.only('Replace basic response data', () => {
+  it('Replace basic response data', () => {
     // !! Important! intercept BEFORE visit
 
-    // !! with the delay, without the assert, the test passes. so the fixture is served AFTER the delay
+    // !! with the delay set, and without the assert (the contains), the test passes. so the fixture is served AFTER the delay
     cy.intercept('GET', 'http://localhost:8081/songs', {
       fixture: 'one_song.json',
       statusCode: 200,
@@ -13,8 +14,14 @@ describe('exercise 4: Isolation', () => {
     cy.wait('@one_song')
     cy.contains('Bangerang')
   })
+
   it('tests retreiving albums', () => {
+    cy.log(
+      '👇 by using the rnd variable in the body I can create unique song-titles and can later on assert on that rnd value '
+    )
     let rnd = Math.random().toString(36).substr(2, 5)
+
+    cy.log('creating an intercept **before** doing a cy.visit')
     cy.intercept('GET', 'http://localhost:8081/songs', {
       statusCode: 200,
       body: [
@@ -46,51 +53,28 @@ describe('exercise 4: Isolation', () => {
           createdAt: '2018-02-13T12:56:24.432Z',
           updatedAt: '2018-02-13T12:56:24.432Z',
         },
-        {
-          id: 3,
-          title: 'Drop it',
-          artist: '3 Steps Ahead',
-          genre: 'Hardcore',
-          album: 'Drop it',
-          albumImageUrl:
-            'https://img.discogs.com/H7zIgOQXI5e7yXB5---U5n1kOXc=/fit-in/303x301/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-17264-1133778698.jpeg.jpg',
-          youtubeId: 'KB09paeV_aE',
-          lyrics: '',
-          tab: '',
-          createdAt: '2018-02-13T12:56:24.432Z',
-          updatedAt: '2018-02-13T12:56:24.432Z',
-        },
-        {
-          id: 4,
-          title: "I Ain't Goin' Out Like That",
-          artist: 'Cypress Hill',
-          genre: 'Rap',
-          album: 'Black Sunday',
-          albumImageUrl:
-            'https://upload.wikimedia.org/wikipedia/en/b/ba/Cypress_Hill-Black_Sunday.jpg',
-          youtubeId: 'q7p-ihYOG5s',
-          lyrics: '',
-          tab: '',
-          createdAt: '2018-02-13T12:56:24.432Z',
-          updatedAt: '2018-02-13T12:56:24.432Z',
-        },
-        {
-          id: 5,
-          title: 'Way of Life',
-          artist: 'Cypress Spring',
-          genre: 'Southern Rock',
-          album: 'Denim XXL',
-          albumImageUrl:
-            'http://averagejoesent.com/wp-content/uploads/sites/4/2017/08/CS_DenimXXL_WOLdeluxe-FINAL-COVER.jpg',
-          youtubeId: 'ZcOYhHDTO28',
-          lyrics: '',
-          tab: '',
-          createdAt: '2018-02-13T12:56:24.432Z',
-          updatedAt: '2018-02-13T12:56:24.432Z',
-        },
       ],
     }).as('getSongs')
+
     cy.visit('/')
-    cy.contains(`${rnd}`)
+    cy.log('👇 now we should assert that all fields show the right information')
+    cy.contains(`${rnd}`).should('be.visible')
+    cy.contains(`Nirvana`).should('be.visible')
+    cy.contains('Alternative Rock').should('be.visible')
+
+    cy.log(
+      '👇 because the url is parsed into a visual image, you cannot use contain to check the existence of the image.'
+    )
+    cy.contains(
+      'https://is3-ssl.mzstatic.com/image/thumb/Features/d0/cc/62/dj.nanioukp.jpg/268x0w.jpg'
+    ).should('not.exist')
+
+    cy.log('👇 therefore I check the source of the image to be visible')
+    cy.get(
+      'img[src="https://is3-ssl.mzstatic.com/image/thumb/Features/d0/cc/62/dj.nanioukp.jpg/268x0w.jpg"]'
+    ).should('be.visible')
+
+    cy.log('👇 counting the number of songs showing in the UI')
+    cy.get('.song').should('have.length', 2).should('be.visible')
   })
 })

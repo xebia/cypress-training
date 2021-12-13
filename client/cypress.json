@@ -1,4 +1,7 @@
 {
   "baseUrl": "http://localhost:8080",
-  "projectId": "wibxf1"
+  "projectId": "wibxf1",
+  "env": {
+    "snapshotFolder": "cypress/snapshots"
+  }
 }

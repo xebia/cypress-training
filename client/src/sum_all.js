@@ -16,7 +16,7 @@ function sumAll(...numbersToSum) {
  **/
 function addFirstArgumentToRestThenSumTheRest(numberToAdd, ...numbers) {
   // teller moet bij 0 beginnen
-  for (var i = 1; i < numbers.length; i++) {
+  for (var i = 0; i < numbers.length; i++) {
     numbers[i] = numbers[i] + numberToAdd
   }
   return sumAll(...numbers)

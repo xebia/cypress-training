@@ -8,7 +8,7 @@ test/unit/coverage
 test/e2e/reports
 selenium-debug.log
 cypress/snapshots
-mydownloads/
+downloads/
 
 
 # Editor directories and files

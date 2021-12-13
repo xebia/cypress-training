@@ -16,6 +16,6 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           working-directory: ./
-          start: "npm start --prefix server, npm ci --prefix client"
+          start: "npm ci --prefix server, npm ci --prefix client"
           wait-on: "http://localhost:8081, http://localhost:8080"
           project: ./client

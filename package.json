@@ -1,0 +1,22 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write client/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://xebia.github.io/cypress-training/",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run build && git add index.js dist"
+    }
+  }
+}

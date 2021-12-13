@@ -2,7 +2,12 @@
 
 module.exports = {
   root: true,
-  extends: ['plugin:prettier/recommended', 'eslint:recommended', 'plugin:vue/recommended', '@vue/prettier'],
+  extends: [
+    'plugin:prettier/recommended',
+    'eslint:recommended',
+    'plugin:vue/recommended',
+    '@vue/prettier',
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
@@ -21,4 +26,4 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
   },
-};
+}

@@ -5,6 +5,8 @@
 - [Exercise 4: Isolation](4-isolation.md)
 - [Exercise 5: Visual Testing](5-visual-testing.md)
 - [Exercise 6: Using Commandline & Configuration](6-commandline.md)
-- [Exercise 7: bonus](7-bonus.md)
+- [Exercise 7: Downloading files](7-file-download.md)
+- [Exercise 8: Running test in CICD](8-cicd.md)
+- [Bonus Exercises](bonus.md)
 
 - <img style="position:absolute; top:1; bottom:0; margin:auto;" src="./images/xebia-logo-bw.png">

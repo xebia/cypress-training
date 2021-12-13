@@ -19,3 +19,9 @@ jobs:
           start: "npm run prod --prefix server, npm run start --prefix client"
           wait-on: "http://localhost:8080"
           project: ./client
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-artifacts
+          path: |
+            client/cypress/videos

@@ -1,0 +1,21 @@
+name: GitHub Actions
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1
+        with:
+          working-directory: client
+      - uses: bahmutov/npm-install@v1
+        with:
+          working-directory: server
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: ./
+          start: "npm start --prefix server, npm start --prefix client"
+          wait-on: "http://localhost:8081, http://localhost:8080"
+          project: ./client

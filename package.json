@@ -1,0 +1,26 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "- Forked client and server from git@github.com:codyseibert/tab-tracker.git",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xebia/cypress-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xebia/cypress-training/issues"
+  },
+  "homepage": "https://github.com/xebia/cypress-training#readme",
+  "devDependencies": {
+    "husky": "^7.0.4"
+  }
+}

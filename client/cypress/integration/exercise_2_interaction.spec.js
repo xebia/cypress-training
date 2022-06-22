@@ -6,7 +6,11 @@
 
   (in our examples we did chain the tests, but this is just because of making it easier to do all the exercises)
 
+  some people
 */
+
+describe('')
+
 describe('exercise 2: Interaction', () => {
   before(() => {
     cy.log(

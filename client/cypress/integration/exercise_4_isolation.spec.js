@@ -2,9 +2,9 @@
 
 describe('exercise 4: Isolation', () => {
   it('Replace basic response data', () => {
-    // !! Important! intercept BEFORE visit
+    // ⚠️ intercept BEFORE visit
 
-    // !! with the delay set, and without the assert (the contains), the test passes. so the fixture is served AFTER the delay
+    // ⚠️ with the delay set, and without the assert (the contains), the test passes. so the fixture is served AFTER the delay
     cy.intercept('GET', 'http://localhost:8081/songs', {
       fixture: 'one_song.json',
       statusCode: 200,

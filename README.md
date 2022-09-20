@@ -12,6 +12,9 @@ You need to have Node Js installed: <https://nodejs.org/en/>
 
 You must at least have **NODE version 8.2.1**
 
+### Prerequisites for Windows users ###
+If you have Windows, you need Python installed. You can do so [HERE](https://www.python.org/downloads/windows/)
+
 ### Client - Terminal A
 
 ``` bash

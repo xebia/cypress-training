@@ -24,11 +24,6 @@ cd client
 npm install
 npm start
 ```
-### Additional step for Mac - M1 processors
-
-``` 
-npm install chromedriver@<chrome-version>
-```
 
 ### Server - Terminal B
 

@@ -24,7 +24,7 @@ Afterwards follow the instructions in the next section 'Checking out the project
 1. Clone the [project from GitHub](https://github.com/xebia/cypress-training)
 
 ``` bash
-git clone https://github.com/xebia/cypress-training.git
+npx degit https://github.com/xebia/cypress-training.git
 ```
 
 ## Starting the client & server

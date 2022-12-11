@@ -6,7 +6,7 @@ These pages serve as documentation for the Cypress Training. You can work throug
 
 The system under test that we will be using is a tabular music tracker. It consists out of a server part, which interfaces with the database. The more visible part is the client, running in your browser as a VueJS project. We will focus on testing the client with Cypress.io.
 
-![server-client](./images/server_client.png)
+![server-client](./images/cy_10_server_client.png)
 
 ## Running the project
 

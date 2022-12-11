@@ -17,16 +17,16 @@ You can find the three Commands used in this exercise in the Cypress API documen
 
 ## Exercise: Basic commands
 
-1. After running the Cypress GUI, a folder called "cypress/integration" was created. Create a new spec file called ```first_test.js``` in this folder and copy in the code below:
+1. After running the Cypress GUI, a folder called "cypress/e2e" was created. Create a new spec file called ```spec.cy.js``` in this folder and copy in the code below:
 
 ``` nodejs
-describe('First test', function () {
-    it('should open the main page', function () {
-    // Create your test here
-
-    });
-});
+describe('empty spec', () => {
+  it('passes', () => {
+    cy.visit('https://example.cypress.io')
+  })
+})
 ```
+
 
 1. Navigate to the main page by using `cy.visit()` to open our Tab Tracker application.
 You can run your test by saving all the changes you've made and open the Cypress GUI (```npx cypress open```).

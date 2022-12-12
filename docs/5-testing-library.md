@@ -30,4 +30,9 @@ We can work around this by using Yarn as a package manager (yarn is a bit less s
 4. Install testing library: `npm install --save-dev @testing-library/cypress`
 5. Import all new Testing library commands in your commands.js file by adding this import `import '@testing-library/cypress/add-commands'`
 
+### Exercise 2. Test the sign-up form using queries from Testing Library
+[If you like to have an overview of all available queries checkout the docs!](https://testing-library.com/docs/queries/about)
+
+1. Write a test which visits `/register` and registers an new user
+2. check if the new user can login as well
 

@@ -6,7 +6,7 @@
       </v-flex>
 
       <v-flex xs6 class="ml-2">
-        <you-tube :youtubeId="song.youtubeId" />
+        <you-tube v-if="song.youtubeId" :youtubeId="song.youtubeId" />
       </v-flex>
     </v-layout>
 

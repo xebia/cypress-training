@@ -39,5 +39,5 @@ A `describe` or `it` - block is implemented like this:
 ```describe(name, config, fn)```
 
 - use the epic search function on the documentation page to figure out how to add config to your it - block.
-- then add default timeout command for your commands
+- then add default command timeout configuration (defaultCommandTimeout)
 - add a test that will validate your configuration

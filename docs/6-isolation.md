@@ -48,7 +48,18 @@ With Cypress you do not have to wait on a response. It will automatically wait f
 
 1. Modify your test in such a way that your assertion does not time-out.
 
+## Exercise: invoke a Request to reset endpoint
+
+⚠️ for the next 2 exercises, start the server
+
+//TODO JOEL
+
+## Exercise: GET the Song from the backend using cy.request
+
+// TODO JOEL
+
 ### Need help?
 
 - Use the network tab in the developer tools of your browser to help you find the calls that your client application is trying to make.
 - Check out the [cy.intercept documentation](https://docs.cypress.io/api/commands/intercept) for the correct syntax
+- Check out the [cy.request documentation](https://docs.cypress.io/api/commands/request) for the correct syntax

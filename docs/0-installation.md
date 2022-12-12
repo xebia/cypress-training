@@ -72,7 +72,7 @@ By typing `npm install cypress --save-dev` NPM will do 2 things:
 - download Cypress into the node_modules folder
 - add Cypress (and all packages it depends on) to package.json
 
-![Cypress installation](./images/installing-cli.mp4 ':include')
+![Cypress installation](./images/installing-cli.mp4 ':include :type=video controls')
 
 ## Launching Cypress
 

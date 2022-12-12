@@ -1,5 +1,5 @@
 <br/><br/>
-![Cypress Logo](./images/cypress.png)
+![Cypress Logo](./images/cypress-v10-logo.png)
 
 > Welcome to the Cypress Training by Xebia
 

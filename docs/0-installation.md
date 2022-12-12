@@ -10,7 +10,7 @@ The system under test that we will be using is a tabular music tracker. It consi
 
 ## Running the project
 
-In order to run the project locally, it is required that you have `node` and `git` installed. For `node` version 8.2.1 or higher is required.
+In order to run the project locally, it is required that you have `node` and `git` installed. For `node` version 18 or higher is required.
 
 If you don't have these installed yet you can find them here:
 
@@ -49,6 +49,20 @@ In another terminal, run the following:
 
 Now go to <http://localhost:8080> to check if everything is running correctly.
 
+If the client will fail starting up and returns an error with something like this:
+```Error: error:0308010C:digital envelope routines::unsupported```
+
+try starting up like this:
+
+- Macos (one-liner)
+
+```export NODE_OPTIONS=--openssl-legacy-provider && npm run start```
+
+- Windows (run both commands seperate)
+
+```set  NODE_OPTIONS=--openssl-legacy-provider```
+```npm run start```
+
 ## Installing Cypress
 
 Installing Cypress via NPM is easy from your project folder.
@@ -56,9 +70,9 @@ Installing Cypress via NPM is easy from your project folder.
 By typing `npm install cypress --save-dev` NPM will do 2 things:
 
 - download Cypress into the node_modules folder
-- add cypress (and all packages it depends on) to package.json
+- add Cypress (and all packages it depends on) to package.json
 
-![Cypress installation](./images/installing-cli.e1693232.gif "Cypress Installation")
+![Cypress installation](./images/installing-cli.mp4 "Cypress Installation")
 
 ## Launching Cypress
 
@@ -66,7 +80,11 @@ To launch Cypress simply run the following command
 
 ```npx cypress open```
 
-This will open the Cypress GUI for you and create the necessary folder structure for you.
+This will open the Cypress GUI for you and asks weather you want to start the Cypress Journey within your project
+with End-to-End testing (E2E) or with Component testing. This training is focussed on writing E2E tests, so you can select the
+E2E panel.
+
+Then Cypress will inform you about the files it added to the project. You can click 'Continue' to Continue. Yes. Cypress is THAT easy 😄
 
 ### About NPM
 

@@ -52,13 +52,12 @@ With Cypress you do not have to wait on a response. It will automatically wait f
 
 ⚠️ for the next 2 exercises, start the server
 
-The first two exercises focussed on stubbing the Server. Now it is time to 'drive' the backend by mocking the Client.
-This means that you can let Cypress send a call to the Server as if it would automate the Frontend. The Server response can then
-asserted.
+The first two exercises focussed on stubbing the Server. Now it is time to 'drive' the backend by testing the API interactions.
+This means that you can let Cypress interact with your Server the same way as your client would normally do. The API/backend response can then be asserted as usual.
 
 Within this exercise we send a proper `cy.request`to the server that calls the reset-db function.
 
-- create a cy.request that calls the reset-db on the Server.
+- create a `cy.request` that calls the reset-db on the Server (see server/package.json for the specific shell command).
 - assert somehow that the database was reset
 - put the cy.request in a Custom Command
 - redesign the interaction test - make sure the reset-db runs before or after the insert new album - test
@@ -69,7 +68,7 @@ Within this exercise we send a proper `cy.request`to the server that calls the r
 It is time for some API testing using Cypress.
 Now you know how to use a cy.request, it's time to level up.
 
-- create a cy.request requesting a song and assert the server returned the proper song with the proper attributeds
+- create a cy.request requesting a song and assert the server returned the proper song with the proper attributes
 
 ### Need help?
 

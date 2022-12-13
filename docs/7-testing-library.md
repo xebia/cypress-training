@@ -36,3 +36,4 @@ We can work around this by using Yarn as a package manager (yarn is a bit less s
 1. Write a test which visits `/register` and registers an new user
 2. check if the new user can login as well
 
+### Bonus: refactor the test from exercise 3

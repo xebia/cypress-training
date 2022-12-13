@@ -25,6 +25,6 @@ Cypress has the option to run 'headless' from your commandline. This means that 
 - Add the baseUrl to your cypress config file and use this baseURL within your tests
 - Overwrite your baseurl when you run Cypress in headless Mode
 
-## Bonus: use Cypress Grab plugin
+## Bonus: use Cypress Greb plugin
 
-- use the Cypress Grab plugin to filter the tests you want to run in an Headless Test Run (ie. to use as smoke test)
+- use the [Cypress Greb plugin](https://github.com/cypress-io/cypress/tree/develop/npm/grep) to filter the tests you want to run in an Headless Test Run (ie. to use as smoke test)

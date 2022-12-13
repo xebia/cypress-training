@@ -85,6 +85,7 @@ with End-to-End testing (E2E) or with Component testing. This training is focuss
 E2E panel.
 
 Then Cypress will inform you about the files it added to the project. You can click 'Continue' to Continue. Yes. Cypress is THAT easy 😄
+> Cypress will ask you to create some demo tests; please choose for the empty project so we have a clean setup to begin with.
 
 ### About NPM
 

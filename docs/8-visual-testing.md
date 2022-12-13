@@ -3,7 +3,7 @@
 Cypress is a Test Runner that focusses on functionality. It does not see what a user sees on the
 other side of the screen (or browser as you will). \n
 Even with it's browser compatability, it checks the functionality of object within each browser, not the
-presentation of it. Therefore Cypress has the option to extend the Cypress functionality with [3rd party plugins](https://docs.cypress.io/plugins/).
+presentation of it. \n Therefore Cypress has the option to extend the Cypress functionality with [3rd party plugins](https://docs.cypress.io/plugins/).
 
 There are several plugins to use, of which we are going to pick one, and explore how it can be used within
 your tests.
@@ -12,70 +12,60 @@ your tests.
 
 In this excercise you will learn to set up visual testing using a Cypress plugin.
 The plugin repo (and information about how to install and use) can be found here:
-<https://github.com/palmerhq/cypress-image-snapshot>
+<https://github.com/FRSOURCE/cypress-plugin-visual-regression-diff>
 
 Steps to be taken are:
 
-- first we install the required snapshop plugin
+- first we install the required cypress-plugin-visual-regression-diff package
 
   ```bash
-  npm install --save-dev cypress-image-snapshot
+  npm install --save-dev cypress-plugin-visual-regression-diff
   ```
 
-  then, we add the following snippets. It is up to you to figure out where
-  to put this code ;)
+  then, we add the following snippets to our commands.js
 
   ```nodejs
-  const {
-    addMatchImageSnapshotPlugin,
-  } = require("cypress-image-snapshot/plugin");
-
-  module.exports = (on, config) => {
-  addMatchImageSnapshotPlugin(on, config)
-  }
+  require("@frsource/cypress-plugin-visual-regression-diff");
   ```
 
-  ```nodejs
-  import { addMatchImageSnapshotCommand } from "cypress-image-snapshot/command";
+And then add merge the following configuration in your cypress.config.js
 
-  addMatchImageSnapshotCommand({
-    failureThreshold: 0.03, // threshold for entire image
-    failureThresholdType: "percent", // percent of image or number of pixels
-    customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
-    capture: "viewport", // capture viewport in screenshot
-  });
-  ```
+```nodejs
+// typescript / ES6
+const { defineConfig } = require('cypress');
+const { initPlugin } = require('@frsource/cypress-plugin-visual-regression-diff/plugins');
+export default defineConfig({
+  // initPlugin must be called in the section where it is used: e2e or component
+  e2e: {
+    setupNodeEvents(on, config) {
+      initPlugin(on, config);
+    },
+  },
+});
 
-  now we are all set to start screenshotting and diffing
-
-## Exercise: Setting a baseline for the visual test
-
-Find out how to use the command-function in your test and run your visual test.
-A suggestion on how to run a specific test-file from the commandline:
-
-```bash
-npx cypress run -s ./cypress/integration/test.js
 ```
 
-## Setup a new test which compares the outcome with the baseline
+now we are all set to start screenshotting and diffing
 
-write your test and share it with the group
+## Exercise 1: Setting a baseline for the visual test
 
-## Visual Testing with Browserstack
+Find out how to use the command-function in your test and run your visual test. Make sure it has a certain threshold to make sure your tests are not getting really flaky.
 
-Browserstack uses their own 'runners' to run setup the requested environments (operating systems and browsers) so that your test can run on top of that. You can use the 'free tier' which has some 'limitations'.
+## Exercise 2: Add dynamic content to a page
 
-! a warning: the free plan of Browserstack has some usage limitations on the dashboard / runners.
+- Add the following code on line `12` of the file `Index.vue`:
 
-1. create a free tier Browserstack account
-   <https://www.browserstack.com/users/sign_up>
+```html
+<img
+  alt="random-movie-poster"
+  src="https://api.lorem.space/image/movie?w=150&h=220"
+/>
+```
 
-2. install browserstack cli:
-   `npm install -g browserstack-cypress-cli`
-3. initialize browserstack in your project in your project folder (client-folder)
-   `browserstack-cypress init`
-4. Fill in the auth, browsers, run_settings values in the browserstack.json file to be able to run your tests. Refer to the configuration options to learn more about all the options you can use in browserstack.json and the possible values that you can mention.
-   you can find your auth key here:
-   <https://www.browserstack.com/accounts/settings>
+- Save the file and look what happens in the browser.
+- Refresh a couple of times. You'll see that each time a different image is shown.
+- Run your visual regression test again.
+  No matter how often you run it, it will continue to fail, because there is a different visual each time.
 
-5. run `browserstack-cypress run` to run your test
+1. Find a way how to fix the test
+2. let's discuss different ways to address this

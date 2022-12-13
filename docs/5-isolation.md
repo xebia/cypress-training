@@ -5,6 +5,8 @@ By removing (external) dependencies you can create specific test situations that
 
 In this exercise you will learn how to setup a Cypress mock server and use routing to fake network responses.
 
+![server-client](./images/cy_10_server_client.png)
+
 ## Exercise: Replace basic response data
 
 For this exercise you will still be using the [TabTracker](https://github.com/codyseibert/tab-tracker/) that was also used during the other exercises. **Make sure to only run the client and NOT the server for this exercise**.

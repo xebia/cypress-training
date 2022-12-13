@@ -19,7 +19,6 @@ Cypress has the option to run 'headless' from your commandline. This means that 
 3. Challenge: run cypress from your commandline with Chrome as browser in headless state.
 4. Challenge: create a failing test, run it from your commandline and find its screenshot in your project.
 
-
 ## Exercise: add the BaseURL in your Cypress Configuration File
 
 - Add the baseUrl to your cypress config file and use this baseURL within your tests
@@ -31,7 +30,7 @@ One of the challenges of setting up your tests is to start the client **before**
 When you start the Client, and the Client is not ready (yet) to accept calls (ie. via a browser), the Cypress tests can fail.
 So how does Cypress know the Client is ready to accept requests (via the browser)?
 
-NPM package start-server-and-test to the resque (https://www.npmjs.com/package/start-server-and-test)
+NPM package start-server-and-test to the [rescue](https://www.npmjs.com/package/start-server-and-test)
 
 When configured within your Client repository, it can handle starting the client **after which** it will start the `npx cypress run` - command.
 
@@ -40,7 +39,6 @@ When the `npx cypress open` command is called before the baseUrl is ready, Cypre
 
 1. install start-server-and-test
 2. configure start-server-and-test within your package.json
-
 
 ## Bonus: use Cypress Greb plugin
 

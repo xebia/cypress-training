@@ -59,7 +59,7 @@ This means that you can let Cypress interact with your Server the same way as yo
 
 Within this exercise we send a proper `cy.request`to the server that calls the reset-db function.
 
-- create a `cy.request` that calls the reset-db on the Server (see server/package.json for the specific shell command).
+- create a `cy.request` that calls the reset-db on the Server
 - assert somehow that the database was reset
 - put the cy.request in a Custom Command
 - redesign the interaction test - make sure the reset-db runs before or after the insert new album - test

@@ -15,7 +15,7 @@ The picture below shows a typical setup of a CICD pipeline setup.
 4. In the .github/workflows directory, create a file named e2e-tests.yml
 5. Make a workflow using the official [Cypress Github Action]https://github.com/cypress-io/github-action#examples)
 6. Make sure at least one of your tests has stubbed API requests/responses (see `cy.intercept()`)
-6. Commit, Push and run your tests on Gitub.com
+6. Commit, Push and run your tests on Github.com
 
 ## Exercise 2 Setup Cypress Cloud for your project
 1. Create new key in Cypress

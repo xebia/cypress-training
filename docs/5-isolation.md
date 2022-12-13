@@ -5,7 +5,7 @@ By removing (external) dependencies you can create specific test situations that
 
 In this exercise you will learn how to setup a Cypress mock server and use routing to fake network responses.
 
-![server-client](./images/cy_10_server_client.png)
+![server-client](./images/cy_10_client_stub.png)
 
 ## Exercise: Replace basic response data
 

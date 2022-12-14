@@ -39,5 +39,6 @@ A `describe` or `it` - block is implemented like this:
 ```describe(name, config, fn)```
 
 - use the epic search function on the documentation page to figure out how to add config to your it - block.
+  you can find the documentation page [here](https://docs.cypress.io/api/table-of-contents)
 - then add default command timeout configuration (defaultCommandTimeout)
 - add a test that will validate your configuration

@@ -7,6 +7,16 @@ In this exercise you will learn how to setup a Cypress mock server and use routi
 
 ![server-client](./images/cy_10_client_stub.png)
 
+## Exercise: Replace basic response data with an empty body
+
+For this exercise you will still be using the [TabTracker](https://github.com/codyseibert/tab-tracker/) that was also used during the other exercises.
+
+Using [cy.intercept()](https://docs.cypress.io/api/commands/intercept) makes it possible to 'spy' or 'stub' your backend calls. This means that you can intercept the request and return a custom response. This is very useful when you want to test your application in isolation. You can also use this to test your application when your backend is not yet ready. (This last scentence was 100% created by Github Copilot 🙌 😏)
+
+1. Create a new spec file and set the baseURL to your TabTracker application.
+2. Use cy.intercept to add a response to the intercepted call, add an empty body: `{}` to the response within the intercept.
+3. Assert that the backend was mocked.
+
 ## Exercise: Replace basic response data
 
 For this exercise you will still be using the [TabTracker](https://github.com/codyseibert/tab-tracker/) that was also used during the other exercises. **Make sure to only run the client and NOT the server for this exercise**.
@@ -42,13 +52,18 @@ The intercept takes multiple arguments. With these arguments you can control the
 
 Adding to the test that you've created in the previous step:
 
-1. Modify the mock server in such a way that the song information is only displayed after 10 seconds. What happens to your assertion?
+1. Modify the mock in such a way that the song information is only displayed after 10 seconds. What happens to your assertion?
+2. Please fix your assertion so that it does not time-out. You can do it in multiple ways.
+   1. Add an alias to your `cy.intercept` and wait for the alias to be called
+   2. extend the timeout of your assertion
+   3. extent the timoout of your complete testsuite
 
 ## Exercise: Wait on your response
 
 With Cypress you do not have to wait on a response. It will automatically wait for your selector to appear in the DOM. However in our previous step we've exceeded the default time-out value of Cypress (4000ms). We do not want to increase this as this would slow down our tests and hide performance issues. However in this case we want to make sure that the page still loads after our 10 second delay. We can solve this by waiting explicitly for our `cy.intercept` action.
 
 1. Modify your test in such a way that your assertion does not time-out.
+2. There are multiple ways to do this. Can you think of one or more options? If so, try to apply them in new tests.
 
 ## Exercise: invoke a Request to reset endpoint
 
@@ -64,13 +79,13 @@ Within this exercise we send a proper `cy.request`to the server that calls the r
 - put the cy.request in a Custom Command
 - redesign the interaction test - make sure the reset-db runs before or after the insert new album - test
 
-
 ## Exercise: GET the Song from the backend using cy.request
 
 It is time for some API testing using Cypress.
-Now you know how to use a cy.request, it's time to level up.
+Now you have made your first step with cy.request, it's time to level up.
 
-- create a cy.request requesting a song and assert the server returned the proper song with the proper attributes
+- create a API-call requesting a song
+- assert the server returned the proper song with the proper attributes
 
 ### Need help?
 

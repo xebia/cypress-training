@@ -84,7 +84,7 @@ Within this exercise we send a proper `cy.request`to the server that calls the r
 It is time for some API testing using Cypress.
 Now you have made your first step with cy.request, it's time to level up.
 
-- create a API-call requesting a song
+- create a API-call requesting just one song
 - assert the server returned the proper song with the proper attributes
 
 ### Need help?

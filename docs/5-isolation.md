@@ -56,7 +56,7 @@ Adding to the test that you've created in the previous step:
 2. Please fix your assertion so that it does not time-out. You can do it in multiple ways.
    1. Add an alias to your `cy.intercept` and wait for the alias to be called
    2. extend the timeout of your assertion
-   3. extend the timoout of your complete testsuite
+   3. extend the timeout of your complete testsuite
 
 ## Exercise: invoke a Request to reset endpoint
 

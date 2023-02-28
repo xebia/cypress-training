@@ -58,13 +58,6 @@ Adding to the test that you've created in the previous step:
    2. extend the timeout of your assertion
    3. extent the timoout of your complete testsuite
 
-## Exercise: Wait on your response
-
-With Cypress you do not have to wait on a response. It will automatically wait for your selector to appear in the DOM. However in our previous step we've exceeded the default time-out value of Cypress (4000ms). We do not want to increase this as this would slow down our tests and hide performance issues. However in this case we want to make sure that the page still loads after our 10 second delay. We can solve this by waiting explicitly for our `cy.intercept` action.
-
-1. Modify your test in such a way that your assertion does not time-out.
-2. There are multiple ways to do this. Can you think of one or more options? If so, try to apply them in new tests.
-
 ## Exercise: invoke a Request to reset endpoint
 
 ⚠️ for the next 2 exercises, start the server
@@ -74,10 +67,13 @@ This means that you can let Cypress interact with your Server the same way as yo
 
 Within this exercise we send a proper `cy.request`to the server that calls the reset-db function.
 
+here are a few steps. After each test, check that it works by running the test.
+
 - create a `cy.request` that calls the reset-db on the Server
-- assert somehow that the database was reset
+- assert 'somehow' that the database was reset
+- add the reset-db call to the beforeEach of your test
 - put the cy.request in a Custom Command
-- redesign the interaction test - make sure the reset-db runs before or after the insert new album - test
+- redesign the interaction test from exercise 3 - make sure the reset-db runs before or after the insert new album - test
 
 ## Exercise: GET the Song from the backend using cy.request
 

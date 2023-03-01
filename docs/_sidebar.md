@@ -5,9 +5,7 @@
 - [Exercise 4: Structure](4-structure.md)
 - [Exercise 5: Isolation](5-isolation.md)
 - [Exercise 6: Using Commandline & Configuration](6-commandline.md)
-- [Exercise 7: Testing Library](7-testing-library.md)
-- [Exercise 8: Visual Testing](8-visual-testing.md)
-- [Exercise 9: Running test in CI/CD](9-cicd.md)
-- [Bonus Exercises](bonus.md)
+- [Exercise 7: DRY - using the Cypress Sessio](7-dry.md)
+- [Exercise 8: Connect to the cloud](8-cloud.md)
 
 - <img style="position:absolute; top:1; bottom:0; margin:auto;" src="./images/xebia-logo-bw.png">

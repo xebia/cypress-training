@@ -2,35 +2,15 @@
 
 Want to know more? We have some extra exercises for you to try out!
 
-## Using the Cypress Dashboard
-
-### Exercise: Output your results to the Cypress Dashboard
-
-1. Click on the `Runs tab` of your project within the Test Runner.
-2. Login using your Github credentials.
-3. Click `Setup Project` to Record.
-4. After setting up your project, Cypress inserted a unique `projectID` into your `cypress.json`.
-5. Run your test suite using a command like this:
-
-   ```bash
-   cypress run --record --key <record key>
-   ```
-
-6. Review your results in your dashboard
-
----
-
-# FILE DOWNLOAD
+## FILE DOWNLOAD
 
 A much requested feature was File downloading.
 Xebia colleague Xavier Viuda created a plugin for this purpose.
 
-## Exercise: Install and use the plugin to download an album image
+### Exercise: Install and use the plugin to download an album image
 
 1. Use NPM to install the file-download plugin [File Downloader](https://github.com/Xvier/cypress-downloadfile).
 2. Create a test to download an Album cover art and assert that the file has been downloaded.
-
-
 
 ## Skipping the UI
 

@@ -6,9 +6,10 @@ Cypress has a cloud service that you can use to run your tests called the 'Cypre
 
 ## Exercise 1. Connecting to the Cypress Cloud
 
-1. If you have not done it yet, create a free Cypress Cloud account
-2. Configure your local Cypress Configuration to make use of the Cypress Cloud
-3. Run your tests from the commandline against the Cypress Cloud
+1. If you have not done it yet, create a free Cypress Cloud account -> https://cloud.cypress.io/
+2. Create a project within your Cypress Cloud.
+3. Configure your project to use the Cypress Cloud.
+4. Run your tests from the commandline against the Cypress Cloud
 
 ## Bonus exercise
 

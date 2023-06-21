@@ -5,7 +5,9 @@
 - [Exercise 4: Structure](4-structure.md)
 - [Exercise 5: Isolation](5-isolation.md)
 - [Exercise 6: Using Commandline & Configuration](6-commandline.md)
-- [Exercise 7: DRY - using the Cypress Sessio](7-dry.md)
+- [Exercise 7: DRY - using the Cypress Session](7-dry.md)
 - [Exercise 8: Connect to the cloud](8-cloud.md)
+- [Exercise 9: CICD](9-cicd.md)
+- [Exercise 10: Markdown preprocessor](10-markdown-preprocessor.md)
 
 - <img style="position:absolute; top:1; bottom:0; margin:auto;" src="./images/xebia-logo-bw.png">

@@ -21,19 +21,19 @@ Afterwards follow the instructions in the next section 'Checking out the project
 
 ## Checking out the project
 
-1. Clone the [project from GitHub](https://github.com/xebia/cypress-training)
+1. Clone the [project from GitHub](https://github.com/xebia/cypress-training) from within your terminal:
 
-``` bash
+```bash
 npx degit https://github.com/xebia/cypress-training.git
 ```
 
 ## Starting the client & server
 
-1. Next we will start both the client and the server.
+1. Next we will start both the client and the server from within the terminal
 
 From the root of the project run the following commands:
 
-``` bash
+```bash
      cd server
      npm install
      npm start
@@ -41,50 +41,54 @@ From the root of the project run the following commands:
 
 In another terminal, run the following:
 
-``` bash
+```bash
     cd client
     npm install
     npm start
- ```
+```
 
 Now go to <http://localhost:8080> to check if everything is running correctly.
 
 If the client will fail starting up and returns an error with something like this:
-```Error: error:0308010C:digital envelope routines::unsupported```
-
-try starting up like this:
+`Error: error:0308010C:digital envelope routines::unsupported`
 
 - Macos (one-liner)
 
-```export NODE_OPTIONS=--openssl-legacy-provider && npm run start```
+`export NODE_OPTIONS=--openssl-legacy-provider && npm run start`
 
 - Windows (run both commands seperate)
 
-```set  NODE_OPTIONS=--openssl-legacy-provider```
-```npm run start```
+`set  NODE_OPTIONS=--openssl-legacy-provider`
+`npm run start`
 
 ## Installing Cypress
 
-Installing Cypress via NPM is easy from your project folder.
+The Training App is a monorepo containing both the client and the server. We will be testing the client with Cypress. <br>
+❗ This means that we want to install Cypress in the client folder
 
-By typing `npm install cypress --save-dev` NPM will do 2 things:
+So navigate to the client folder
+
+And by typing `npm install cypress --save-dev` NPM will do 2 things:
 
 - download Cypress into the node_modules folder
 - add Cypress (and all packages it depends on) to package.json
 
 ![Cypress installation](./images/installing-cli.mp4 ':include :type=video controls')
 
-## Launching Cypress
+## Running Cypress
 
-To launch Cypress simply run the following command
+❗❗ Because have installed Cypress from within the client folder, Cypress needs to be started from within the client folder.
 
-```npx cypress open```
+To run Cypress simply run the following command from within the client folder:
+
+`npx cypress open`
 
 This will open the Cypress GUI for you and asks weather you want to start the Cypress Journey within your project
 with End-to-End testing (E2E) or with Component testing. This training is focussed on writing E2E tests, so you can select the
 E2E panel.
 
 Then Cypress will inform you about the files it added to the project. You can click 'Continue' to Continue. Yes. Cypress is THAT easy 😄
+
 > Cypress will ask you to create some demo tests; please choose for the empty project so we have a clean setup to begin with.
 
 ### About NPM

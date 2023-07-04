@@ -4,10 +4,9 @@
   - [GitHub](https://github.com/cypress-io/cypress)
   - [Homepage](https://cypress.io/)
   - [Twitter](https://twitter.com/Cypress_io)
-  - [YouTube](https://www.youtube.com/channel/UC-EOsTo2l2x39e4JmSaWNRQ/videos)
 - Links
-  - [Xebia Academy](https://training.xebia.com/)
-  - [Qxperts](https://www.qxperts.io/)
-  - [Xebia](https://www.xebia.com/)
+  - [Xebia Quality](https://website.xebia.com/eu/digital-transformation/software-technology/software-quality/)
   - [Cypress Dutch Community](https://www.meetup.com/nl-NL/cypress-meetup-group-netherlands)
   - [Test Masters Series](https://www.meetup.com/Test-Masters-Series/)
+  - [Xebia](https://www.xebia.com/)
+  - [Xebia Academy](https://training.xebia.com/)

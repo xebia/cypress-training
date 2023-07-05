@@ -9,5 +9,6 @@
 - [Exercise 8: Connect to the cloud](8-cloud.md)
 - [Exercise 9: CICD](9-cicd.md)
 - [Exercise 10: Markdown preprocessor](10-markdown-preprocessor.md)
+- [Extensions](extensions.md)
 
 - <img style="position:absolute; top:1; bottom:0; margin:auto;" src="./images/xebia-logo-bw.png">

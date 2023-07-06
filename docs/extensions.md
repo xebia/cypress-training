@@ -8,8 +8,6 @@ when using Vscode, there are a lot of extensions that can help you with your dev
 - Prettier
 - Eslint
 - Console Ninja
-- github Copilot
+- Github Copilot
 - Add Only
 - Cypress Fixture-IntelliSense
-- Markdown Lint
-- Todo Tree

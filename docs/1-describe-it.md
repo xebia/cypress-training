@@ -29,7 +29,7 @@ From within the location where your opened the Cypress GUI, you can find the fol
 <!-- div:title-panel -->
 <!-- div:left-panel -->
 
-- create a new e2e spec file with the name `describe-it.spec.cy`
+- create a new e2e spec file with the name `describe-it.spec.cy.js`
 - create in your freshly created spec file a describe block
 - and create 2 empty tests within the describe block.
 

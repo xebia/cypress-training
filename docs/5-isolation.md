@@ -339,8 +339,8 @@ with this implementation we 'store' the element in 'el' and can then use it in t
 ```javascript
 cy.get('element').should((el) => {
   console.log(el); // yes, you can use console.log in Cypress
-  expect(el).should('be.visible');
-  expect(el).should('have.attr', 'href');
+  expect(el).to.be.visible;
+  expect(el).to.have.attribute('href');
 });
 ```
 

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "compulim.vscode-mocha",
+    "spoonscen.es6-mocha-snippets",
+    "firejump.frame-indent-rainbow",
+    "wallabyjs.console-ninja",
+    "github.copilot",
+    "ub1que.add-only",
+    "josefbiehler.cypress-fixture-intellisense"
+  ]
+}

@@ -11,3 +11,7 @@ when using Vscode, there are a lot of extensions that can help you with your dev
 - Github Copilot
 - Add Only
 - Cypress Fixture-IntelliSense
+
+If you go to your Marketplace in VScode, you can search for these extensions and install them. Because we have added them within the repository in the `.vscode/extensions.json` file, you will be prompted to install them when you open the repository in VScode.
+
+These extensions are not mandatory, but they can help you with your development. You can find more information about these extensions in the [VScode Marketplace](https://marketplace.visualstudio.com/).

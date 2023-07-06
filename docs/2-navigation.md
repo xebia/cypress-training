@@ -15,23 +15,99 @@ To complete this exercise you will need to use at least the following commands:
 You can find the three Commands used in this exercise in the Cypress API documentation. Use this documentation to complete your exercise.
 <https://docs.cypress.io/api/table-of-contents>
 
-## Exercise: Basic commands
+## Exercise 1: navigate to the of the TabTracker
 
-1. After running the Cypress GUI, a folder called "cypress/e2e" was created. Create a new spec file called ```spec.cy.js``` in this folder and copy in the code below:
+<!-- panels:start -->
+<!-- div:title-panel -->
+<!-- div:left-panel -->
 
-``` nodejs
-describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
-  })
-})
+Navigate to the main page by using `cy.visit()` to open our Tab Tracker application.
+
+<!-- tabs:start -->
+<!-- tab: open answer 👉 -->
+
+click on the "javascript" tab to open the answer
+
+<!-- tab:javascript 1 -->
+
+```js
+describe('a nice description', () => {
+  it('should visit the TabTracker', () => {
+    cy.visit('http://localhost:8080');
+  });
+});
 ```
 
-1. Navigate to the main page by using `cy.visit()` to open our Tab Tracker application.
-You can run your test by saving all the changes you've made and open the Cypress GUI (```npx cypress open```).
+<!-- tabs:end -->
 
-1. Get a (unique) element on the page.
+<!-- panels:start -->
+<!-- div:title-panel -->
+<!-- div:left-panel -->
+
+<!-- tabs:end -->
+
+<!-- panels:start -->
+<!-- div:title-panel -->
+<!-- div:left-panel -->
+
+## Exercise 2: assert that the search bar is visible
+
+Get a (unique) element on the page and assert that it is vissible.
 Use `cy.get()` to select an element on the page.
 
-1. Assert that this element contains certain attributes.
-Use `cy.should()` to assert that the element is represented according to your expectations. The goal of your test is to assert that the landing page has been successfully opened.
+<!-- tabs:start -->
+<!-- tab: open answer 👉 -->
+
+click on the "javascript" tab to open the answer
+
+<!-- tab:javascript 2 -->
+
+```js
+describe('a nice description', () => {
+  it('should visit the TabTracker', () => {
+    cy.visit('http://localhost:8080');
+    cy.get(
+      'input[aria-label="Search by song title, artist, album, or genre"]',
+    ).should('be.visible');
+  });
+});
+```
+
+<!-- tabs:end -->
+
+<!-- panels:start -->
+<!-- div:title-panel -->
+<!-- div:left-panel -->
+
+## Exercise 3: Assert that the search bar contains certain attributes
+
+Use `cy.should()` to assert that the element is represented according to your expectations.
+
+<!-- tabs:start -->
+<!-- tab: open answer 👉 -->
+
+click on the "javascript" tab to open the answer
+
+<!-- tab:javascript 3 -->
+
+```js
+describe('a nice description', () => {
+  it('should do an assert', () => {
+    expect(1).to.equal(1);
+  });
+
+  it.only('should be the only test to run', () => {
+    expect(true).not.to.equal(false);
+  });
+
+  it.skip('should be skipped', () => {
+    expect(true).not.to.equal(false);
+  });
+});
+```
+
+<!-- tabs:end -->
+
+<!-- panels:start -->
+<!-- div:title-panel -->
+<!-- div:left-panel -->

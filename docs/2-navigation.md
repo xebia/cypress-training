@@ -92,16 +92,15 @@ click on the "javascript" tab to open the answer
 
 ```js
 describe('a nice description', () => {
-  it('should do an assert', () => {
-    expect(1).to.equal(1);
-  });
-
-  it.only('should be the only test to run', () => {
-    expect(true).not.to.equal(false);
-  });
-
-  it.skip('should be skipped', () => {
-    expect(true).not.to.equal(false);
+  it('should assert a search bar attribute', () => {
+    cy.visit('/');
+    cy.get('input')
+      .should('be.visible')
+      .should(
+        'have.attr',
+        'aria-label',
+        'Search by song title, artist, album, or genre',
+      );
   });
 });
 ```

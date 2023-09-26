@@ -9,6 +9,7 @@ To complete this exercise have a look at the following commands:
 - [cy.should()](https://docs.cypress.io/api/commands/should.html)
 - [cy.contains()](https://docs.cypress.io/api/commands/contains.html)
 - [cy.parent()](https://docs.cypress.io/api/commands/parent.html)
+- [cy.scrollIntoView()](https://docs.cypress.io/api/commands/scrollIntoView)
 - [cy.find()](https://docs.cypress.io/api/commands/find.html)
 - [cy.siblings()](https://docs.cypress.io/api/commands/siblings.html)
 

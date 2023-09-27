@@ -35,6 +35,8 @@ click on the "javascript" tab to open the answer
 
 ```js
 it('should create a new song', () => {
+  cy.visit('/');
+
   cy.get('a[href="#/songs/create"]').click();
   cy.url().should('include', '/songs/create');
   cy.get('#sngTitle').type('My Song');
@@ -49,8 +51,6 @@ it('should create a new song', () => {
   cy.contains('Create Song').click();
 
   cy.contains('My Song').should('be.visible');
-
-  cy.visit('/');
 });
 ```
 

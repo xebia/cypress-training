@@ -71,6 +71,20 @@
           v-model="song.lyrics"
           id="sngLyrics"
         ></v-text-field>
+        <v-btn
+          dark
+          class="cyan"
+          id="sngBtn"
+          @click="onPickFile">
+          Upload lyrics
+        </v-btn>
+        <input
+          type="file"
+          style="display: none"
+          ref="fileInput"
+          accept=".txt"
+          @change="onFilePicked"
+      />
       </panel>
 
       <div class="danger-alert" v-if="error">
@@ -127,6 +141,17 @@ export default {
       } catch (err) {
         console.log(err)
       }
+    },
+    onPickFile () {
+      this.$refs.fileInput.click()
+    },
+    onFilePicked (event) {
+      const files = event.target.files
+      const fileReader = new FileReader()
+      fileReader.addEventListener('load', () => {
+        this.song.lyrics = fileReader.result;
+      })
+      fileReader.readAsText(files[0])
     }
   }
 }

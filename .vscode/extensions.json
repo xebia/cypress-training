@@ -8,6 +8,7 @@
     "wallabyjs.console-ninja",
     "github.copilot",
     "ub1que.add-only",
-    "josefbiehler.cypress-fixture-intellisense"
+    "josefbiehler.cypress-fixture-intellisense",
+    "ms-playwright.playwright"
   ]
 }

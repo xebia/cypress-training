@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: 18
 
-    - name: Install npm dependencies
+    - name: Install npm dependencie
       run: cd client && npm ci
 
     - name: Install dependencies
